@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { useThemeCtx } from '../context/ThemeContext'
 
 function SunIcon() {
@@ -26,6 +27,18 @@ function MoonIcon() {
 
 export function Nav() {
   const { theme, toggle } = useThemeCtx()
+  const [scrollPct, setScrollPct] = useState(0)
+
+  useEffect(() => {
+    function handleScroll() {
+      const doc = document.documentElement
+      const scrolled = doc.scrollTop || document.body.scrollTop
+      const total = doc.scrollHeight - doc.clientHeight
+      setScrollPct(total > 0 ? (scrolled / total) * 100 : 0)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const links = [
     { label: 'Work',       href: '#projects' },
@@ -43,6 +56,9 @@ export function Nav() {
 
   return (
     <nav className="nav">
+      {/* Scroll progress bar */}
+      <div className="nav__progress" style={{ width: `${scrollPct}%` }} />
+
       <div className="container nav__inner">
         <a className="nav__logo" href="#hero">
           EP<span>.</span>
@@ -65,6 +81,15 @@ export function Nav() {
           >
             {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
           </button>
+
+          <a
+            className="nav__cv"
+            href="/Eduard_Pichardo_CV_EN.pdf"
+            download
+            title="Download CV (English)"
+          >
+            CV ↓
+          </a>
 
           <a className="nav__cta" href="mailto:eduarro2001@gmail.com">
             Hire me

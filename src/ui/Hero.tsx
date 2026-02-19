@@ -16,9 +16,17 @@ export function Hero() {
 
         {/* Left */}
         <div ref={leftRef}>
+          {/* Availability eyebrow */}
           <div className="hero__eyebrow">
             <span className="hero__eyebrow-dot" />
             Available for new projects
+          </div>
+
+          {/* Info strip */}
+          <div className="hero__availability">
+            <span className="hero__avail-pill">UTC-4 (AST)</span>
+            <span className="hero__avail-pill">Full-time remote / Contract</span>
+            <span className="hero__avail-pill">TypeScript · NestJS · React</span>
           </div>
 
           <h1 className="hero__name">
@@ -35,6 +43,13 @@ export function Hero() {
           <div className="hero__actions">
             <a className="btn btn--primary" href="mailto:eduarro2001@gmail.com">
               Start a project
+            </a>
+            <a
+              className="btn btn--outline"
+              href="/Eduard_Pichardo_CV_EN.pdf"
+              download
+            >
+              Download CV ↓
             </a>
             <a
               className="btn btn--outline"
