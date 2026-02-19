@@ -23,6 +23,20 @@ const projects = [
     tags: ['React', 'TypeScript', 'Product UX'],
     link: 'https://github.com/Eduard177/MangApp',
   },
+  {
+    num: '04',
+    title: 'Automated Expense Parser — Backend',
+    desc: 'Backend service that automates personal-finance ingestion by scanning and parsing bank notification emails, mapping and categorizing transactions automatically. Implemented secure Gmail OAuth2, automated polling/parsing logic, and a PostgreSQL for transaction history and categorization.',
+    tags: ['Node.js', 'NestJS', 'PostgreSQL', 'Gmail API', 'TypeScript', 'Docker'],
+    link: 'https://github.com/Eduard177/fintech-rd',
+  },
+  {
+    num: '05',
+    title: 'Automated Expense Parser — Mobile',
+    desc: 'Cross-platform mobile application (React Native + Expo) for real-time expense visualization and synchronization with the mail-parsing backend. Focused on responsive charts, transaction timelines, and seamless end-to-end data sync.',
+    tags: ['React Native', 'Expo', 'TypeScript', 'TailwindCSS'],
+    link: 'https://github.com/Eduard177/fintech-rd-mobile',
+  },
 ]
 
 const LockIcon = () => (
