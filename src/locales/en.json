@@ -1,0 +1,211 @@
+{
+  "nav": {
+    "work": "Work",
+    "impact": "Impact",
+    "stack": "Stack",
+    "experience": "Experience",
+    "about": "About",
+    "cv": "CV",
+    "contact": "Contact"
+  },
+  "hero": {
+    "available": "Available for new projects",
+    "timezone": "UTC-4 (AST)",
+    "workType": "Full-time remote / Contract",
+    "techStack": "TypeScript · NestJS · React",
+    "name": "Eduard",
+    "lastName": "Pichardo",
+    "tagline": "Full-stack engineer who builds revenue-critical platforms across fintech, telecom, and SaaS — turning operational bottlenecks into measurable performance gains.",
+    "startProject": "Start a project",
+    "downloadCV": "Download CV",
+    "github": "GitHub",
+    "location": "Dominican Republic · Remote",
+    "experience": "4+ yrs experience"
+  },
+  "impact": {
+    "stats": [
+      {
+        "number": 20,
+        "suffix": "%",
+        "label": "Faster ticket resolution",
+        "context": "Telecom ops · Verizon"
+      },
+      {
+        "number": 15,
+        "suffix": "%",
+        "label": "Response time reduction",
+        "context": "SQL Server query optimisation"
+      },
+      {
+        "number": 99.9,
+        "suffix": "%",
+        "label": "Uptime maintained",
+        "context": "Financial services platform"
+      },
+      {
+        "number": 30,
+        "suffix": "%",
+        "label": "Test coverage lift",
+        "context": "Jest · strict code review"
+      }
+    ]
+  },
+  "overview": {
+    "label": "What I build",
+    "title": "Systems that turn minutes into momentum.",
+    "subtitle": "I design and ship full-stack platforms that carry real operational weight — trusted by fintech and telecom clients to stay reliable under high volume.",
+    "areas": [
+      {
+        "icon": "⚡",
+        "title": "AI-augmented ops",
+        "text": "Call center automation with real-time KPI dashboards that eliminate handoff friction and cut resolution time."
+      },
+      {
+        "icon": "🔧",
+        "title": "Performance engineering",
+        "text": "Measurable compression of service latency and query response times without sacrificing system resiliency."
+      },
+      {
+        "icon": "📱",
+        "title": "Full-stack product delivery",
+        "text": "NestJS backends paired with polished React and React Native interfaces — shipped end-to-end."
+      }
+    ]
+  },
+  "projects": {
+    "label": "Selected work",
+    "title": "Full-stack builds that carry operational weight.",
+    "items": [
+      {
+        "num": "01",
+        "title": "AI Call Center Agent + Ops Dashboard",
+        "desc": "Built an AI-powered call center workflow system for Newtech S.R.L. — full-stack delivery across a NestJS backend and a React Native (Expo) mobile KPI cockpit that operators use in real time.",
+        "tags": ["NestJS", "React Native", "Expo", "PostgreSQL", "AI workflows", "TypeScript"],
+        "confidential": true
+      },
+      {
+        "num": "02",
+        "title": "Financial Services Platform",
+        "desc": "High-volume transaction backend with 99.9% uptime, AWS S3-secured document storage, and a fast React/Vite interface optimised for operational clarity.",
+        "tags": ["NestJS", "PostgreSQL", "AWS S3", "React", "Vite", "TypeScript"],
+        "confidential": true
+      },
+      {
+        "num": "03",
+        "title": "MangApp",
+        "desc": "Consumer manga reading experience built for speed and polish — clean library management, smooth pagination, and a carefully crafted reading flow.",
+        "tags": ["React", "TypeScript", "Product UX"],
+        "link": "https://github.com/Eduard177/MangApp"
+      },
+      {
+        "num": "04",
+        "title": "Automated Expense Parser — Backend",
+        "desc": "Backend service that automates personal-finance ingestion by scanning and parsing bank notification emails, mapping and categorizing transactions automatically. Implemented secure Gmail OAuth2, automated polling/parsing logic, and a PostgreSQL for transaction history and categorization.",
+        "tags": ["Node.js", "NestJS", "PostgreSQL", "Gmail API", "TypeScript", "Docker"],
+        "link": "https://github.com/Eduard177/fintech-rd"
+      },
+      {
+        "num": "05",
+        "title": "Automated Expense Parser — Mobile",
+        "desc": "Cross-platform mobile application (React Native + Expo) for real-time expense visualization and synchronization with the mail-parsing backend. Focused on responsive charts, transaction timelines, and seamless end-to-end data sync.",
+        "tags": ["React Native", "Expo", "TypeScript", "TailwindCSS"],
+        "link": "https://github.com/Eduard177/fintech-rd-mobile"
+      }
+    ]
+  },
+  "stack": {
+    "label": "Stack fluency",
+    "title": "Built for scale, tested for reliability.",
+    "subtitle": "Fluent across the full JS/TS ecosystem and Java/C# enterprise stacks — with hands-on cloud and CI/CD experience.",
+    "groups": [
+      {
+        "label": "Primary stack",
+        "items": ["TypeScript", "JavaScript", "NestJS", "Node.js", "React", "React Native", "Angular", "Vite", "PostgreSQL"]
+      },
+      {
+        "label": "Enterprise stack",
+        "items": ["Java 17", "Spring Boot", "C#", ".NET Core", "Entity Framework", "SQL Server", "Oracle DB", "Kotlin"]
+      },
+      {
+        "label": "Infra & tooling",
+        "items": ["AWS S3", "AWS EC2", "Docker", "Git", "GitHub", "GitLab", "Jira", "Jest", "xUnit", "Maven", "pnpm"]
+      },
+      {
+        "label": "AI & dev tools",
+        "items": ["Claude Code", "GitHub Copilot", "Gemini AI", "OpenCode", "Codex"]
+      }
+    ]
+  },
+  "experience": {
+    "label": "Experience",
+    "title": "Operational depth across regulated industries.",
+    "roles": [
+      {
+        "company": "Newtech S.R.L.",
+        "role": "Software Engineer",
+        "period": "Sep 2021 — Present",
+        "highlights": [
+          "Designed and built a financial services platform (NestJS + PostgreSQL + AWS S3 + React) processing high-volume transactions at 99.9% uptime.",
+          "Built an AI-powered call center agent and React Native mobile ops dashboard — end-to-end full-stack delivery.",
+          "Improved Verizon telecom platform ticket resolution time by 20% and cut SQL Server response time by 15%.",
+          "Lifted unit test coverage by 30% through Jest expansion and stricter code review standards."
+        ]
+      },
+      {
+        "company": "Naxmek Business S.R.L.",
+        "role": "Backend Engineer (Contract)",
+        "period": "May 2023 — Sep 2023",
+        "highlights": [
+          "Built and maintained RESTful APIs for business management using C# and .NET Core.",
+          "Implemented EF Core data access layers and a full xUnit test suite."
+        ]
+      },
+      {
+        "company": "XpertCode",
+        "role": "Software Developer Intern",
+        "period": "Feb 2021 — Sep 2021",
+        "highlights": [
+          "Developed a NestJS web-scraping API to validate government tax identifiers (RNC/NCF).",
+          "Built reusable Vue.js/Nuxt.js UI components, improving frontend delivery efficiency by 40%.",
+          "Designed and managed the PostgreSQL database schema for scalability."
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "label": "Let's work together",
+    "title": "Ready to compress your operational timelines?",
+    "subtitle": "I build full-stack platforms that remove friction, protect revenue, and deliver measurable performance gains. Let's talk.",
+    "primary": "Book a discovery call",
+    "secondary": "View GitHub"
+  },
+  "footer": {
+    "copyright": "© 2026 Eduard Pichardo"
+  },
+  "about": {
+    "title": "About",
+    "navLink": "About",
+    "intro": "I'm a self-taught full-stack engineer based in the Dominican Republic, building software that handles real operational weight.",
+    "story": {
+      "title": "The story",
+      "text": "I started with computer systems and technical support, then moved into development because I wanted to build things, not just fix them. Over 4+ years, I've worked across fintech, telecom, and SaaS, shipping platforms that process financial transactions, automate call centers, and optimize enterprise operations. I'm fluent across TypeScript, Java, and C# ecosystems, and I bring the same rigor to backend architecture as I do to frontend polish."
+    },
+    "approach": {
+      "title": "The approach",
+      "text": "I believe in measurable outcomes over abstract claims. Every project I ship has metrics attached: uptime percentages, response time reductions, test coverage improvements. I use AI tools (Claude Code, GitHub Copilot, Gemini) to accelerate delivery, not replace thinking. I write tests because I've seen production incidents. I do code reviews because I've seen technical debt compound."
+    },
+    "looking": {
+      "title": "What I'm looking for",
+      "text": "Senior full-stack roles at remote-first companies where I can own features end-to-end, work with engineers who care about craft, and build software that matters. I'm open to contracts and full-time positions across fintech, developer tools, and operational platforms."
+    },
+    "languages": {
+      "title": "Languages",
+      "spanish": "Spanish (Native)",
+      "english": "English (Professional Working Proficiency, B2/C1)"
+    },
+    "interests": {
+      "title": "Beyond code",
+      "text": "Digital creativity, video editing, continuous self-improvement (mental and physical), and exploring new technologies."
+    }
+  }
+}

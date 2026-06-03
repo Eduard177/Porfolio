@@ -1,98 +1,57 @@
-import { useState, useEffect } from 'react'
-import { useThemeCtx } from '../context/ThemeContext'
+import { useEffect, useState } from 'react'
+import { useLocale } from '../context/LocaleContext'
 
-function SunIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="5"/>
-      <line x1="12" y1="1" x2="12" y2="3"/>
-      <line x1="12" y1="21" x2="12" y2="23"/>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-      <line x1="1" y1="12" x2="3" y2="12"/>
-      <line x1="21" y1="12" x2="23" y2="12"/>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-    </svg>
-  )
-}
-
-function MoonIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-    </svg>
-  )
-}
-
-export function Nav() {
-  const { theme, toggle } = useThemeCtx()
-  const [scrollPct, setScrollPct] = useState(0)
+export default function Nav() {
+  const [scrollProgress, setScrollProgress] = useState(0)
+  const { t, locale, setLocale } = useLocale()
 
   useEffect(() => {
-    function handleScroll() {
-      const doc = document.documentElement
-      const scrolled = doc.scrollTop || document.body.scrollTop
-      const total = doc.scrollHeight - doc.clientHeight
-      setScrollPct(total > 0 ? (scrolled / total) * 100 : 0)
+    const onScroll = () => {
+      const h = document.documentElement
+      const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight)
+      setScrollProgress(Math.min(scrolled * 100, 100))
     }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   const links = [
-    { label: 'Work',       href: '#projects' },
-    { label: 'Impact',     href: '#impact' },
-    { label: 'Stack',      href: '#stack' },
-    { label: 'Experience', href: '#experience' },
+    { href: '#work', label: t.nav.work },
+    { href: '#stack', label: t.nav.stack },
+    { href: '#experience', label: t.nav.experience },
+    { href: '#about', label: t.nav.about },
   ]
 
-  function handleToggle(e: React.MouseEvent<HTMLButtonElement>) {
-    const rect = e.currentTarget.getBoundingClientRect()
-    const x = rect.left + rect.width / 2
-    const y = rect.top + rect.height / 2
-    toggle(x, y)
-  }
+  const cvPath = locale === 'es'
+    ? '/Eduard_Pichardo_CV_ES_2026.pdf'
+    : '/Eduard_Pichardo_CV_EN_2026.pdf'
 
   return (
     <nav className="nav">
-      {/* Scroll progress bar */}
-      <div className="nav__progress" style={{ width: `${scrollPct}%` }} />
-
+      <div className="nav__progress" style={{ width: `${scrollProgress}%` }} />
       <div className="container nav__inner">
-        <a className="nav__logo" href="#hero">
-          EP<span>.</span>
+        <a href="/" className="nav__logo">
+          E<span>.</span>P
         </a>
 
         <div className="nav__links">
           {links.map((l) => (
-            <a key={l.href} href={l.href}>
-              {l.label}
-            </a>
+            <a key={l.href} href={l.href}>{l.label}</a>
           ))}
         </div>
 
         <div className="nav__right">
           <button
-            className="nav__theme-btn"
-            onClick={handleToggle}
-            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-            title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+            className="nav__lang-btn"
+            onClick={() => setLocale(locale === 'en' ? 'es' : 'en')}
           >
-            {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+            {locale === 'en' ? 'ES' : 'EN'}
           </button>
-
-          <a
-            className="nav__cv"
-            href="/Eduard_Pichardo_CV_EN.pdf"
-            download
-            title="Download CV (English)"
-          >
-            CV ↓
+          <a className="nav__cv" href={cvPath} download>
+            {t.nav.cv}
           </a>
-
           <a className="nav__cta" href="mailto:eduarro2001@gmail.com">
-            Hire me
+            {t.nav.contact}
           </a>
         </div>
       </div>

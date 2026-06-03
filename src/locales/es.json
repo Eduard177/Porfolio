@@ -1,0 +1,211 @@
+{
+  "nav": {
+    "work": "Proyectos",
+    "impact": "Impacto",
+    "stack": "Stack",
+    "experience": "Experiencia",
+    "about": "Sobre mí",
+    "cv": "CV",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "available": "Disponible para nuevos proyectos",
+    "timezone": "UTC-4 (AST)",
+    "workType": "Tiempo completo remoto / Contrato",
+    "techStack": "TypeScript · NestJS · React",
+    "name": "Eduard",
+    "lastName": "Pichardo",
+    "tagline": "Ingeniero full-stack que construye plataformas críticas para ingresos en fintech, telecomunicaciones y SaaS — convirtiendo cuellos de botella operativos en ganancias de rendimiento medibles.",
+    "startProject": "Iniciar proyecto",
+    "downloadCV": "Descargar CV",
+    "github": "GitHub",
+    "location": "República Dominicana · Remoto",
+    "experience": "4+ años de experiencia"
+  },
+  "impact": {
+    "stats": [
+      {
+        "number": 20,
+        "suffix": "%",
+        "label": "Resolución de tickets más rápida",
+        "context": "Operaciones telecom · Verizon"
+      },
+      {
+        "number": 15,
+        "suffix": "%",
+        "label": "Reducción en tiempo de respuesta",
+        "context": "Optimización de consultas SQL Server"
+      },
+      {
+        "number": 99.9,
+        "suffix": "%",
+        "label": "Uptime mantenido",
+        "context": "Plataforma de servicios financieros"
+      },
+      {
+        "number": 30,
+        "suffix": "%",
+        "label": "Aumento en cobertura de tests",
+        "context": "Jest · code review estricto"
+      }
+    ]
+  },
+  "overview": {
+    "label": "Lo que construyo",
+    "title": "Sistemas que convierten minutos en impulso.",
+    "subtitle": "Diseño y entrego plataformas full-stack con peso operativo real — confiadas por clientes de fintech y telecomunicaciones para mantenerse confiables bajo alto volumen.",
+    "areas": [
+      {
+        "icon": "⚡",
+        "title": "Operaciones con IA",
+        "text": "Automatización de call center con dashboards KPI en tiempo real que eliminan fricción en transferencias y reducen tiempo de resolución."
+      },
+      {
+        "icon": "🔧",
+        "title": "Ingeniería de rendimiento",
+        "text": "Compresión medible de latencia de servicios y tiempos de respuesta de consultas sin sacrificar resiliencia del sistema."
+      },
+      {
+        "icon": "📱",
+        "title": "Entrega de productos full-stack",
+        "text": "Backends NestJS emparejados con interfaces pulidas en React y React Native — entregados de extremo a extremo."
+      }
+    ]
+  },
+  "projects": {
+    "label": "Trabajo seleccionado",
+    "title": "Construcciones full-stack con peso operativo.",
+    "items": [
+      {
+        "num": "01",
+        "title": "Agente IA para Call Center + Dashboard Ops",
+        "desc": "Construí un sistema de flujos de trabajo para call center potenciado por IA para Newtech S.R.L. — entrega full-stack con backend NestJS y cockpit móvil KPI en React Native (Expo) que operadores usan en tiempo real.",
+        "tags": ["NestJS", "React Native", "Expo", "PostgreSQL", "Flujos IA", "TypeScript"],
+        "confidential": true
+      },
+      {
+        "num": "02",
+        "title": "Plataforma de Servicios Financieros",
+        "desc": "Backend de transacciones de alto volumen con 99.9% de uptime, almacenamiento seguro de documentos con AWS S3, e interfaz rápida en React/Vite optimizada para claridad operativa.",
+        "tags": ["NestJS", "PostgreSQL", "AWS S3", "React", "Vite", "TypeScript"],
+        "confidential": true
+      },
+      {
+        "num": "03",
+        "title": "MangApp",
+        "desc": "Experiencia de lectura de manga para consumidores construida para velocidad y pulido — gestión limpia de biblioteca, paginación fluida y un flujo de lectura cuidadosamente diseñado.",
+        "tags": ["React", "TypeScript", "UX de Producto"],
+        "link": "https://github.com/Eduard177/MangApp"
+      },
+      {
+        "num": "04",
+        "title": "Parser Automatizado de Gastos — Backend",
+        "desc": "Servicio backend que automatiza la ingestión de finanzas personales escaneando y parseando emails de notificaciones bancarias, mapeando y categorizando transacciones automáticamente. Implementé Gmail OAuth2 seguro, lógica de polling/parsing automatizado y PostgreSQL para historial de transacciones y categorización.",
+        "tags": ["Node.js", "NestJS", "PostgreSQL", "Gmail API", "TypeScript", "Docker"],
+        "link": "https://github.com/Eduard177/fintech-rd"
+      },
+      {
+        "num": "05",
+        "title": "Parser Automatizado de Gastos — Móvil",
+        "desc": "Aplicación móvil multiplataforma (React Native + Expo) para visualización de gastos en tiempo real y sincronización con el backend de parsing de emails. Enfocado en gráficos responsivos, líneas de tiempo de transacciones y sincronización de datos fluida de extremo a extremo.",
+        "tags": ["React Native", "Expo", "TypeScript", "TailwindCSS"],
+        "link": "https://github.com/Eduard177/fintech-rd-mobile"
+      }
+    ]
+  },
+  "stack": {
+    "label": "Fluidez en stack",
+    "title": "Construido para escala, probado para confiabilidad.",
+    "subtitle": "Fluido en el ecosistema completo JS/TS y stacks empresariales Java/C# — con experiencia práctica en cloud y CI/CD.",
+    "groups": [
+      {
+        "label": "Stack primario",
+        "items": ["TypeScript", "JavaScript", "NestJS", "Node.js", "React", "React Native", "Angular", "Vite", "PostgreSQL"]
+      },
+      {
+        "label": "Stack empresarial",
+        "items": ["Java 17", "Spring Boot", "C#", ".NET Core", "Entity Framework", "SQL Server", "Oracle DB", "Kotlin"]
+      },
+      {
+        "label": "Infra y herramientas",
+        "items": ["AWS S3", "AWS EC2", "Docker", "Git", "GitHub", "GitLab", "Jira", "Jest", "xUnit", "Maven", "pnpm"]
+      },
+      {
+        "label": "IA y herramientas dev",
+        "items": ["Claude Code", "GitHub Copilot", "Gemini AI", "OpenCode", "Codex"]
+      }
+    ]
+  },
+  "experience": {
+    "label": "Experiencia",
+    "title": "Profundidad operativa en industrias reguladas.",
+    "roles": [
+      {
+        "company": "Newtech S.R.L.",
+        "role": "Ingeniero de Software",
+        "period": "Sep 2021 — Presente",
+        "highlights": [
+          "Diseñé y construí una plataforma de servicios financieros (NestJS + PostgreSQL + AWS S3 + React) procesando transacciones de alto volumen con 99.9% de uptime.",
+          "Construí un agente de call center con IA y dashboard móvil de operaciones en React Native — entrega full-stack de extremo a extremo.",
+          "Mejoré el tiempo de resolución de tickets en la plataforma telecom de Verizon en 20% y reduje el tiempo de respuesta de SQL Server en 15%.",
+          "Aumenté la cobertura de tests unitarios en 30% mediante expansión de Jest y estándares más estrictos de code review."
+        ]
+      },
+      {
+        "company": "Naxmek Business S.R.L.",
+        "role": "Ingeniero Backend (Contrato)",
+        "period": "May 2023 — Sep 2023",
+        "highlights": [
+          "Construí y mantuve APIs RESTful para gestión empresarial usando C# y .NET Core.",
+          "Implementé capas de acceso a datos con EF Core y suite completa de tests con xUnit."
+        ]
+      },
+      {
+        "company": "XpertCode",
+        "role": "Pasante de Desarrollo de Software",
+        "period": "Feb 2021 — Sep 2021",
+        "highlights": [
+          "Desarrollé una API de web-scraping con NestJS para validar identificadores fiscales gubernamentales (RNC/NCF).",
+          "Construí componentes UI reutilizables en Vue.js/Nuxt.js, mejorando la eficiencia de entrega frontend en 40%.",
+          "Diseñé y gestioné el esquema de base de datos PostgreSQL para escalabilidad."
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "label": "Trabajemos juntos",
+    "title": "¿Listo para comprimir tus tiempos operativos?",
+    "subtitle": "Construyo plataformas full-stack que eliminan fricción, protegen ingresos y entregan ganancias de rendimiento medibles. Hablemos.",
+    "primary": "Agendar llamada",
+    "secondary": "Ver GitHub"
+  },
+  "footer": {
+    "copyright": "© 2026 Eduard Pichardo"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "navLink": "Sobre mí",
+    "intro": "Soy un ingeniero full-stack autodidacta basado en República Dominicana, construyendo software que maneja peso operativo real.",
+    "story": {
+      "title": "La historia",
+      "text": "Comencé con sistemas informáticos y soporte técnico, luego me moví al desarrollo porque quería construir cosas, no solo arreglarlas. Durante más de 4 años, he trabajado en fintech, telecomunicaciones y SaaS, entregando plataformas que procesan transacciones financieras, automatizan call centers y optimizan operaciones empresariales. Soy fluido en los ecosistemas TypeScript, Java y C#, y traigo el mismo rigor a la arquitectura backend que al pulido frontend."
+    },
+    "approach": {
+      "title": "El enfoque",
+      "text": "Creo en resultados medibles sobre afirmaciones abstractas. Cada proyecto que entrego tiene métricas adjuntas: porcentajes de uptime, reducciones de tiempo de respuesta, mejoras en cobertura de tests. Uso herramientas de IA (Claude Code, GitHub Copilot, Gemini) para acelerar la entrega, no para reemplazar el pensamiento. Escribo tests porque he visto incidentes en producción. Hago code reviews porque he visto la deuda técnica compoundarse."
+    },
+    "looking": {
+      "title": "Lo que busco",
+      "text": "Roles senior full-stack en empresas remote-first donde pueda poseer características de extremo a extremo, trabajar con ingenieros que se preocupan por el oficio, y construir software que importe. Estoy abierto a contratos y posiciones full-time en fintech, herramientas para desarrolladores y plataformas operativas."
+    },
+    "languages": {
+      "title": "Idiomas",
+      "spanish": "Español (Nativo)",
+      "english": "Inglés (Dominio Profesional, B2/C1)"
+    },
+    "interests": {
+      "title": "Más allá del código",
+      "text": "Creatividad digital, edición de video, mejora continua (mental y física), y exploración de nuevas tecnologías."
+    }
+  }
+}

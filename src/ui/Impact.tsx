@@ -1,40 +1,36 @@
+import { motion } from 'framer-motion'
+import { useLocale } from '../context/LocaleContext'
 import { useCountUp } from '../hooks/useCountUp'
 
-const stats = [
-  { number: 20,   decimals: 0, sup: '%', label: 'Faster ticket resolution', context: 'Telecom ops · Verizon' },
-  { number: 15,   decimals: 0, sup: '%', label: 'Response time reduction',  context: 'SQL Server query optimisation' },
-  { number: 99.9, decimals: 1, sup: '%', label: 'Uptime maintained',        context: 'Financial services platform' },
-  { number: 30,   decimals: 0, sup: '%', label: 'Test coverage lift',       context: 'Jest · strict code review' },
-]
-
-function StatItem({ stat }: { stat: typeof stats[number] }) {
-  const { ref, value } = useCountUp<HTMLDivElement>({
-    target: stat.number,
-    duration: 1500,
-    decimals: stat.decimals,
-  })
+function StatItem({ stat, index }: { stat: { number: number; suffix: string; label: string; context: string }; index: number }) {
+  const { value } = useCountUp(stat.number, 1500, stat.number % 1 !== 0 ? 1 : 0)
 
   return (
-    <div className="impact__item" ref={ref}>
+    <motion.div
+      className="impact__item"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-50px' }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+    >
       <div className="impact__number">
-        {value}
-        <sup>{stat.sup}</sup>
+        {value}<sup>{stat.suffix}</sup>
       </div>
-      <p className="impact__label">{stat.label}</p>
-      <p className="impact__context">{stat.context}</p>
-    </div>
+      <div className="impact__label">{stat.label}</div>
+      <div className="impact__context">{stat.context}</div>
+    </motion.div>
   )
 }
 
-export function Impact() {
+export default function Impact() {
+  const { t } = useLocale()
+
   return (
     <section className="impact" id="impact">
-      <div className="container">
-        <div className="impact__grid">
-          {stats.map((s) => (
-            <StatItem key={s.label} stat={s} />
-          ))}
-        </div>
+      <div className="impact__grid">
+        {t.impact.stats.map((stat, i) => (
+          <StatItem key={i} stat={stat} index={i} />
+        ))}
       </div>
     </section>
   )
